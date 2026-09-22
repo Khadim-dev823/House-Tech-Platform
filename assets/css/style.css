@@ -1,0 +1,1854 @@
+/* ==========================================================================
+   HOUSE TECH DAKAR - STYLE SHEET OFFICIEL
+   Design System Light Tech (Zéro Débordement Garanti de 200px à 4K)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DU DESIGN SYSTEM
+   -------------------------------------------------------------------------- */
+:root {
+    --bg-page: #ffffff;
+    --bg-surface: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-topbar: #f1f5f9;
+
+    --tech-blue: #2563eb;
+    --tech-blue-hover: #1d4ed8;
+    --tech-cyan: #0284c7;
+    --color-whatsapp: #25d366;
+    --color-whatsapp-dark: #1eaa52;
+    --color-gold-star: #f59e0b;
+
+    --text-heading: #0f172a;
+    --text-body: #334155;
+    --text-muted: #64748b;
+
+    --border-light: #e2e8f0;
+    --border-blue: rgba(37, 99, 235, 0.25);
+    --shadow-card: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --transition: 0.22s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET STRICT ANTI-DÉBORDEMENT
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip; /* Empêche tout scroll horizontal parasite */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--bg-page);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-heading);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+}
+
+.text-tech-blue { color: var(--tech-blue) !important; }
+.text-whatsapp { color: var(--color-whatsapp) !important; }
+.fs-8 { font-size: 0.75rem !important; }
+
+/* --------------------------------------------------------------------------
+   3. SECTION 1 : TOPBAR CLAIRE
+   -------------------------------------------------------------------------- */
+.topbar-light {
+    background-color: var(--bg-topbar);
+    border-bottom: 1px solid var(--border-light);
+    padding: 7px 0;
+    font-size: 0.8rem;
+}
+
+.topbar-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-body);
+    font-weight: 500;
+}
+
+.topbar-item a {
+    color: var(--text-heading);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.topbar-item a:hover {
+    color: var(--tech-blue);
+}
+
+.topbar-sep {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.badge-google {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    color: var(--text-heading);
+    font-family: var(--font-heading);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.badge-status-open {
+    background-color: rgba(37, 211, 102, 0.12);
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    color: var(--color-whatsapp-dark);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-indicator {
+    width: 7px;
+    height: 7px;
+    background-color: var(--color-whatsapp);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--color-whatsapp);
+}
+
+/* --------------------------------------------------------------------------
+   4. SECTION 2 : HEADER E-COMMERCE (100% BLANC OPAQUE - ANTI-TRANSPARENCE)
+   -------------------------------------------------------------------------- */
+.main-header {
+    position: sticky !important;
+    top: 0 !important;
+    background-color: #ffffff !important; /* 100% Opaque : aucun élément ne passe au travers */
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    z-index: 1030;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    gap: 6px;
+    width: 100%;
+}
+
+.brand-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.brand-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: clamp(0.8rem, 3.8vw, 1.15rem);
+    color: var(--text-heading);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+
+.brand-sub {
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: var(--tech-blue);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.header-search-box {
+    flex-grow: 1;
+    max-width: 440px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-surface);
+    border: 1.5px solid var(--border-light);
+    border-radius: 50px;
+    padding: 3px 5px 3px 14px;
+    transition: var(--transition);
+}
+
+.search-form:focus-within {
+    border-color: var(--tech-blue);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-form input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.82rem;
+    font-family: var(--font-body);
+    color: var(--text-heading);
+}
+
+.search-form input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-form button {
+    background-color: var(--tech-blue);
+    border: none;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.search-form button:hover {
+    background-color: var(--tech-blue-hover);
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link-custom {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-body);
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    padding: 6px 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--tech-blue);
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--tech-blue);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    transform: scaleX(1);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0 !important;
+}
+
+.cart-trigger-btn {
+    background: #ffffff;
+    border: 1.5px solid var(--border-light);
+    color: var(--text-heading);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+    flex-shrink: 0 !important;
+}
+
+.cart-trigger-btn:hover {
+    border-color: var(--tech-blue);
+    color: var(--tech-blue);
+}
+
+.cart-counter {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background-color: var(--tech-blue);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.55rem;
+    font-weight: 800;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-whatsapp-direct {
+    background-color: var(--color-whatsapp);
+    color: #ffffff !important;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.76rem;
+    letter-spacing: 0.4px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    transition: var(--transition);
+}
+
+.btn-whatsapp-direct:hover {
+    background-color: var(--color-whatsapp-dark);
+}
+
+.burger-menu-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-heading);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 3px;
+    flex-shrink: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-drawer {
+    display: none;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    padding: 14px 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav-drawer.active {
+    display: block;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.m-nav-link {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-body);
+    text-decoration: none;
+    padding: 7px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION 3 : HERO SECTION TECH
+   -------------------------------------------------------------------------- */
+.hero-tech-section {
+    background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border-bottom: 1px solid var(--border-light);
+    padding: 30px 0 40px 0;
+}
+
+.hero-tech-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    color: var(--text-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(0.68rem, 2.5vw, 0.78rem);
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    margin-bottom: 14px;
+}
+
+.hero-tech-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: clamp(1.25rem, 5.5vw, 2.6rem);
+    line-height: 1.15;
+    color: var(--text-heading);
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+}
+
+.text-tech-gradient {
+    color: var(--tech-blue);
+    background: linear-gradient(135deg, var(--tech-blue) 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-tech-desc {
+    font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+    color: var(--text-body);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 22px;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.btn-tech-primary {
+    background-color: var(--tech-blue);
+    color: #ffffff !important;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 11px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+    transition: var(--transition);
+}
+
+.btn-tech-primary:hover {
+    background-color: var(--tech-blue-hover);
+    transform: translateY(-2px);
+}
+
+.btn-tech-whatsapp {
+    background-color: var(--color-whatsapp);
+    color: #ffffff !important;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 11px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+    transition: var(--transition);
+}
+
+.btn-tech-whatsapp:hover {
+    background-color: var(--color-whatsapp-dark);
+}
+
+.hero-image-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.hero-phone-img {
+    width: auto;
+    max-width: 320px;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+    display: block;
+    margin: 0 auto;
+}
+
+.floating-tech-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 92%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+}
+
+.floating-tech-badge .badge-title {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.72rem;
+    color: var(--text-heading);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.floating-tech-badge .badge-sub {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION 4 : TRUST BAR (RÉASSURANCE)
+   -------------------------------------------------------------------------- */
+.trust-tech-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 25px 0;
+}
+
+.trust-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 14px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.trust-card:hover {
+    border-color: var(--tech-blue);
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.trust-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.trust-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: var(--text-heading);
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.trust-desc {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION 5 : RAYONS / WIDGETS (PARFAITEMENT CALIBRÉS SANS COUPURE)
+   -------------------------------------------------------------------------- */
+.departments-section {
+    background-color: #f1f5f9;
+    border-bottom: 1px solid var(--border-light);
+    padding: 45px 0;
+}
+
+.section-title-wrap {
+    margin-bottom: 26px;
+}
+
+.section-tag-blue {
+    color: var(--tech-blue);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.section-heading-dark {
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 5vw, 2rem);
+    font-weight: 900;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.section-sub-text {
+    font-size: clamp(0.75rem, 2.6vw, 0.9rem);
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.tech-widget-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 14px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+    transition: var(--transition);
+}
+
+.tech-widget-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--tech-blue);
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.widget-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.icon-apple { background-color: #0f172a; color: #ffffff; }
+.icon-samsung { background-color: rgba(37, 99, 235, 0.1); color: #2563eb; }
+.icon-audio { background-color: rgba(2, 132, 199, 0.1); color: #0284c7; }
+.icon-watch { background-color: rgba(245, 158, 11, 0.1); color: #d97706; }
+
+/* Titre du Rayon : ZÉRO mot coupé, taille adaptée */
+.widget-title {
+    font-family: var(--font-heading);
+    font-size: clamp(0.75rem, 2.8vw, 0.95rem);
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+    line-height: 1.2;
+    word-break: normal;
+    hyphens: none;
+}
+
+.widget-desc {
+    font-size: clamp(0.65rem, 2.2vw, 0.74rem);
+    color: var(--text-muted);
+    line-height: 1.35;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.widget-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.widget-action-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    color: var(--text-heading);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.tech-widget-card:hover .widget-action-circle {
+    background-color: var(--tech-blue);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   8. SECTION 6 : PRODUITS (FILTRES 2x2 & CARTES PROPRES)
+   -------------------------------------------------------------------------- */
+.tech-products-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 50px 0;
+}
+
+.tech-filters-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.tech-filters-group {
+    display: flex;
+    flex-wrap: wrap; /* Rangement parfait 2 par 2 */
+    justify-content: center;
+    gap: 8px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.tech-filter-pill {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tech-filter-pill:hover {
+    color: var(--tech-blue);
+    border-color: var(--tech-blue);
+}
+
+.tech-filter-pill.active {
+    background-color: var(--tech-blue);
+    border-color: var(--tech-blue);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.device-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+    transition: var(--transition);
+}
+
+.device-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--tech-blue);
+}
+
+.device-media-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.device-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.device-card:hover .device-img {
+    transform: scale(1.06);
+}
+
+.device-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    padding: 2px 7px;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.badge-sealed {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--tech-blue);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.badge-warranty {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-popular {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.device-details {
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.device-brand-label {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--tech-blue);
+    margin-bottom: 2px;
+}
+
+.device-name {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+.device-short-specs {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: block;
+    white-space: normal;
+}
+
+.storage-selector {
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.storage-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.storage-options {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.storage-btn {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-body);
+    font-family: var(--font-heading);
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.storage-btn:hover {
+    border-color: var(--tech-blue);
+    color: var(--tech-blue);
+}
+
+.storage-btn.active {
+    background-color: var(--tech-blue);
+    border-color: var(--tech-blue);
+    color: #ffffff;
+}
+
+.device-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-light);
+}
+
+.stock-status-pill {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.btn-add-device-cart {
+    background-color: var(--tech-blue);
+    color: #ffffff;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.btn-add-device-cart:hover {
+    background-color: var(--tech-blue-hover);
+}
+
+.btn-view-all-shop {
+    background-color: #ffffff;
+    color: var(--text-heading);
+    border: 2px solid var(--tech-blue);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 11px 26px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
+    transition: var(--transition);
+}
+
+.btn-view-all-shop:hover {
+    background-color: var(--tech-blue);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   9. SECTION 7 : ATELIER RÉPARATION & SAV
+   -------------------------------------------------------------------------- */
+.repair-service-section {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 50px 0;
+}
+
+.repair-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 20px 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.repair-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--tech-blue);
+}
+
+.repair-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: rgba(37, 99, 235, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.repair-time-badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.repair-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 6px;
+    line-height: 1.25;
+}
+
+.repair-desc {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+
+.btn-repair-quote {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--tech-blue);
+    font-family: var(--font-heading);
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.btn-repair-quote:hover {
+    background-color: var(--tech-blue);
+    border-color: var(--tech-blue);
+    color: #ffffff !important;
+}
+
+.btn-repair-quote i {
+    color: var(--color-whatsapp);
+    font-size: 0.95rem;
+}
+
+.btn-repair-quote:hover i {
+    color: #ffffff;
+}
+
+.repair-trust-banner {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow-card);
+}
+
+.trust-banner-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.98rem;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+}
+
+.trust-banner-sub {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+}
+
+.btn-visit-workshop {
+    background-color: var(--tech-blue);
+    color: #ffffff !important;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.76rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.btn-visit-workshop:hover {
+    background-color: var(--tech-blue-hover);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   10. SECTION 8 : AVIS CLIENTS & ÉTOILES GOOGLE
+   -------------------------------------------------------------------------- */
+.reviews-tech-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 55px 0;
+}
+
+.google-rating-score-pill {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-heading);
+}
+
+.stars-gold {
+    color: var(--color-gold-star) !important;
+    font-size: 0.82rem;
+    display: inline-flex;
+    gap: 2px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 18px 14px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--tech-blue);
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.reviewer-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--tech-blue);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.88rem;
+    flex-shrink: 0;
+}
+
+.avatar-blue { background-color: #0284c7; }
+.avatar-dark { background-color: #0f172a; }
+
+.reviewer-name {
+    font-family: var(--font-heading);
+    font-size: 0.86rem;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.review-date {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.review-text {
+    font-size: 0.78rem;
+    color: var(--text-body);
+    line-height: 1.55;
+    margin-bottom: 12px;
+    flex-grow: 1;
+    font-style: italic;
+}
+
+.review-tag {
+    display: inline-flex;
+    align-self: flex-start;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   11. SECTION 9 : CONTACT & ACCÈS GPS
+   -------------------------------------------------------------------------- */
+.contact-tech-section {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 55px 0;
+}
+
+.contact-card-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--shadow-card);
+}
+
+.contact-row-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.c-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: rgba(37, 99, 235, 0.08);
+    color: var(--tech-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.c-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.c-val {
+    color: var(--text-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.c-val a {
+    color: var(--text-heading);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.c-val a:hover {
+    color: var(--tech-blue);
+}
+
+.map-card-box {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-card);
+}
+
+/* --------------------------------------------------------------------------
+   12. SECTION 10 : FOOTER DE MARQUE
+   -------------------------------------------------------------------------- */
+.tech-footer {
+    background-color: #ffffff;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid var(--border-light);
+}
+
+.footer-brand-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.15rem;
+    color: var(--text-heading);
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+}
+
+.footer-tagline {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.footer-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.footer-links-row a {
+    font-family: var(--font-heading);
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--text-body);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links-row a:hover {
+    color: var(--tech-blue);
+}
+
+.footer-credits-line {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-light);
+}
+
+/* --------------------------------------------------------------------------
+   13. TIROIR DU PANIER & BOUTON WHATSAPP FLOTTANT
+   -------------------------------------------------------------------------- */
+.cart-backdrop-light {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 1050;
+}
+
+.cart-backdrop-light.active {
+    display: block;
+}
+
+.cart-side-drawer-light {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    max-width: 90vw;
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 1px solid var(--border-light);
+    z-index: 1060;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+    transition: right 0.3s ease;
+}
+
+.cart-side-drawer-light.open {
+    right: 0;
+}
+
+.cart-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cart-drawer-title {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-heading);
+}
+
+.btn-close-drawer {
+    background: transparent;
+    border: none;
+    color: var(--text-heading);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.cart-drawer-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.cart-drawer-footer {
+    padding: 16px;
+    border-top: 1px solid var(--border-light);
+    background-color: var(--bg-surface);
+}
+
+.cart-summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+}
+
+.cart-summary-line strong {
+    color: var(--tech-blue);
+    font-size: 1rem;
+    font-family: var(--font-heading);
+}
+
+.btn-whatsapp-checkout-tech {
+    width: 100%;
+    background-color: var(--color-whatsapp);
+    color: #ffffff;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-checkout-tech:hover {
+    background-color: var(--color-whatsapp-dark);
+}
+
+.btn-clear-cart-tech {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.cart-item-row-tech {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cart-item-info-tech h6 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 2px;
+}
+
+.cart-item-info-tech span {
+    font-size: 0.7rem;
+    color: var(--tech-blue);
+    font-weight: 600;
+}
+
+.btn-del-cart-item {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 4px;
+}
+
+/* Bouton Flottant WhatsApp */
+.floating-whatsapp {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    left: auto !important;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-whatsapp);
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(37, 211, 102, 0.35);
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   ADAPTATION SMARTPHONE CONFORT & HAUTE VISIBILITÉ (ÉCRANS 320px à 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Topbar */
+    .topbar-light { padding: 5px 0; font-size: 0.74rem; }
+    .topbar-left { flex-direction: column; gap: 2px; text-align: center; }
+    .topbar-sep { display: none; }
+
+    /* En-tête : Logo et Titre HOUSE TECH plus grands et affirmés */
+    .header-row { padding: 8px 0; gap: 8px; }
+    .brand-logo { height: 38px; } /* Agrandie de 32px à 38px */
+    .brand-title { 
+        font-size: clamp(1rem, 4.4vw, 1.22rem) !important; /* Titre plus grand et bien gras */
+        font-weight: 900; 
+    }
+    .brand-sub { font-size: 0.62rem; }
+
+    .cart-trigger-btn { width: 36px; height: 36px; font-size: 0.95rem; }
+    .cart-counter { width: 16px; height: 16px; font-size: 0.58rem; }
+    .burger-menu-btn { font-size: 1.25rem; padding: 3px; }
+
+    .mobile-search-row { padding: 4px 0 10px 0 !important; }
+    .search-form { height: 36px; padding: 2px 4px 2px 14px; }
+    .search-form input { font-size: 0.78rem; }
+    .search-form button { width: 28px; height: 28px; font-size: 0.75rem; }
+
+    /* Hero : Grand Titre H1 puissant et accrocheur */
+    .hero-tech-section { padding: 22px 0 35px 0; }
+    .hero-tech-badge { font-size: 0.75rem; padding: 5px 14px; }
+    .hero-tech-title { 
+        font-size: clamp(1.7rem, 6.8vw, 2.25rem) !important; /* Titre agrandi et prestigieux */
+        line-height: 1.15; 
+        margin-bottom: 12px; 
+    }
+    .hero-tech-desc { 
+        font-size: 0.88rem; /* Texte plus confortable pour les yeux */
+        line-height: 1.55; 
+        margin-bottom: 18px; 
+    }
+    .hero-btn-group { flex-direction: column; align-items: stretch; gap: 9px; }
+    .btn-tech-primary, .btn-tech-whatsapp { width: 100%; justify-content: center; padding: 11px 18px; font-size: 0.8rem; }
+
+    .hero-phone-img { max-width: 220px; max-height: 250px; }
+    .floating-tech-badge { padding: 6px 12px; }
+
+    /* Trust Bar */
+    .trust-tech-bar { padding: 18px 0; }
+    .trust-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 6px;
+        gap: 6px;
+    }
+    .trust-icon-box { width: 34px; height: 34px; font-size: 0.95rem; }
+    .trust-title { font-size: 0.76rem; }
+    .trust-desc { font-size: 0.65rem; }
+
+    /* Rayons : Titres nets et aérés */
+    .departments-section { padding: 30px 0; }
+    .tech-widget-card { padding: 14px 10px; }
+    .widget-icon-box { width: 36px; height: 36px; font-size: 1.1rem; margin-bottom: 8px; }
+    .widget-title { font-size: 0.84rem; line-height: 1.2; }
+    .widget-desc { font-size: 0.68rem; margin-bottom: 8px; }
+
+    /* Produits */
+    .tech-products-section { padding: 40px 0; }
+    .device-media-box { height: 170px; padding: 10px; }
+    .device-details { padding: 12px 10px; }
+    .device-name { font-size: 0.92rem; }
+    .device-short-specs { font-size: 0.72rem; margin-bottom: 8px; }
+    .storage-btn { font-size: 0.65rem; padding: 3px 7px; }
+    .btn-add-device-cart { padding: 8px 12px; font-size: 0.74rem; }
+
+    /* Réparation */
+    .repair-service-section { padding: 40px 0; }
+    .repair-card { padding: 18px 14px; }
+    .repair-title { font-size: 0.95rem; }
+    .repair-desc { font-size: 0.74rem; }
+    .btn-visit-workshop { width: 100%; }
+
+    /* Avis & Contact */
+    .reviews-tech-section { padding: 40px 0; }
+    .contact-tech-section { padding: 40px 0; }
+}
+
+/* ==========================================================================
+   SECTION 9 : RETRAIT EN BOUTIQUE EXPRESS (SANS CARTE LOURDE)
+   ========================================================================== */
+.store-teaser-section {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 50px 0;
+}
+
+.store-teaser-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.store-teaser-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 3.5vw, 1.85rem);
+    font-weight: 900;
+    color: var(--text-heading);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.store-teaser-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 620px;
+}
+
+.store-info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.store-pill {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-heading);
+    font-family: var(--font-heading);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-store-primary {
+    background-color: var(--tech-blue);
+    color: #ffffff !important;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 13px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.22);
+    transition: var(--transition);
+}
+
+.btn-store-primary:hover {
+    background-color: var(--tech-blue-hover);
+    transform: translateY(-2px);
+}
+
+.btn-store-outline {
+    background-color: transparent;
+    color: var(--text-heading) !important;
+    border: 1.5px solid var(--border-light);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.btn-store-outline:hover {
+    border-color: var(--tech-blue);
+    color: var(--tech-blue) !important;
+    background-color: var(--bg-surface);
+}
+
+@media (max-width: 768px) {
+    .store-teaser-section { padding: 30px 0; }
+    .store-teaser-card { padding: 22px 16px; }
+    .store-info-pills { justify-content: center; }
+    .btn-store-primary, .btn-store-outline { width: 100%; }
+}
+
+/* ==========================================================================
+   PAGE BOUTIQUE : BANNIÈRE & FILTRES CATALOGUE
+   ========================================================================== */
+.shop-banner-section {
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    border-bottom: 1px solid var(--border-light);
+    padding: 30px 0 35px 0;
+}
+
+.shop-breadcrumb .breadcrumb {
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.shop-breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.shop-breadcrumb a:hover {
+    color: var(--tech-blue);
+}
+
+.shop-breadcrumb .breadcrumb-item.active {
+    color: var(--tech-blue);
+    font-weight: 700;
+}
+
+.shop-page-title {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.shop-page-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    line-height: 1.5;
+}
+
+.shop-badge-trust {
+    display: inline-flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    padding: 10px 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-card);
+}
+
+/* Barre de Filtres Boutique */
+.shop-toolbar-section {
+    background-color: #FFFFFF;
+    padding: 20px 0 10px 0;
+}
+
+.shop-toolbar-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.shop-filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.shop-pill {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-body);
+    font-family: var(--font-heading);
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 8px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.shop-pill:hover {
+    border-color: var(--tech-blue);
+    color: var(--tech-blue);
+}
+
+.shop-pill.active {
+    background-color: var(--tech-blue);
+    border-color: var(--tech-blue);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+@media (max-width: 768px) {
+    .shop-banner-section { padding: 20px 0 25px 0; }
+    .shop-page-title { font-size: 1.35rem; }
+    .shop-page-desc { font-size: 0.8rem; }
+    .shop-toolbar-box { justify-content: center; }
+    .shop-filter-pills { justify-content: center; width: 100%; }
+    .shop-pill { font-size: 0.68rem; padding: 6px 14px; }
+}
