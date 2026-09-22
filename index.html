@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <!-- ==========================================================================
+            MÉTADONNÉES DE BASE & PERFORMANCE
+         ========================================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Bamba Web Studio - Khadim Seck">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="SN-DK">
+    <meta name="geo.placename" content="Dakar">
+    <meta name="geo.position" content="14.7485;-17.3248">
+    <meta name="ICBM" content="14.7485, -17.3248">
+
+    <!-- Titre Officiel & SEO -->
+    <title>House Tech Dakar | Smartphones Neufs &amp; Reconditionnés, Accessoires &amp; Réparation</title>
+    <meta name="description"
+        content="House Tech (Keur Mbaye Fall, Arrêt Dioumadji) : Vente d'iPhones scellés, Samsung Galaxy, accessoires certifiés et atelier de réparation express en 30 min à Dakar.">
+    <meta name="keywords"
+        content="House Tech Dakar, vente iPhone Dakar, smartphone Keur Mbaye Fall, Samsung Sénégal, réparation téléphone Dakar, chargeur original, Iphone sénégal, Iphone authentique dakar, Iphone authentique Sénégal, Bamba Web Studio">
+
+    <!-- Favicon Officiel (Logo Pomme HT) -->
+    <link rel="icon" type="image/png" href="assets/img/logo/logo.png">
+    <link rel="shortcut icon" href="assets/img/logo/logo.png" type="image/x-icon">
+
+    <!-- Open Graph (Partage WhatsApp & Réseaux Sociaux) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="House Tech Dakar | Smartphones &amp; Accessoires d'Origine">
+    <meta property="og:description"
+        content="Smartphones garantis jusqu'à 12 mois, accessoires certifiés et réparation express à Keur Mbaye Fall.">
+    <meta property="og:image" content="assets/img/logo/logo.png">
+    <meta property="og:url" content="https://housetech.sn">
+    <meta property="og:locale" content="fr_SN">
+
+    <!-- Optimisation Vitesse : Pré-connexion aux polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Frameworks Légers CDN (Bootstrap 5.3 & FontAwesome 6) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Feuille de Style Officielle House Tech -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="page-top">
+
+    <!-- ==========================================================================
+            SECTION 1 : TOPBAR CLAIRE TECH (CONTACT DIRECT & HORAIRES)
+         ========================================================================== -->
+    <div class="topbar-light">
+        <div class="container">
+            <div class="topbar-flex">
+                <!-- Coordonnées Physiques & Appel -->
+                <div class="topbar-left">
+                    <span class="topbar-item">
+                        <i class="fas fa-location-dot text-tech-blue"></i>
+                        Keur Mbaye Fall, Arrêt Dioumadji, Dakar
+                    </span>
+                    <span class="topbar-sep d-none d-md-inline">•</span>
+                    <span class="topbar-item">
+                        <i class="fas fa-phone-volume text-tech-blue"></i>
+                        <a href="tel:+221783333321">+221 78 333 33 21</a>
+                    </span>
+                </div>
+
+                <!-- Preuve Sociale Google & Statut d'Ouverture -->
+                <div class="topbar-right d-none d-md-flex align-items-center gap-3">
+                    <span class="badge-google">
+                        <i class="fab fa-google text-primary me-1"></i> 5,0 ⭐ (Avis Vérifiés)
+                    </span>
+                    <span class="badge-status-open">
+                        <span class="pulse-indicator"></span> Ouvert jusqu'à 22h00
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==========================================================================
+            SECTION 2 : HEADER E-COMMERCE TECH (LOGO HT, RECHERCHE & PANIER)
+         ========================================================================== -->
+    <header class="main-header sticky-top">
+        <div class="container">
+            <div class="header-row">
+                <!-- 1. Logo Officiel House Tech -->
+                <!-- 1. Logo Officiel House Tech -->
+                <a class="brand-box" href="index.html">
+                    <img src="assets/img/logo/logo.png" alt="House Tech Dakar" class="brand-logo">
+                    <div class="brand-text">
+                        <span class="brand-title">HOUSE TECH</span>
+                        <span class="brand-sub d-none d-sm-inline">SMARTPHONES &amp; SAV</span>
+                    </div>
+                </a>
+
+                <!-- 2. Barre de Recherche en Direct (Style TechShop / E-commerce Pro) -->
+                <div class="header-search-box d-none d-lg-flex">
+                    <form class="search-form" onsubmit="event.preventDefault();">
+                        <input type="text" id="liveSearchInput" placeholder="Rechercher un iPhone, Samsung, chargeur, écouteurs..." autocomplete="off">
+                        <button type="submit" aria-label="Rechercher">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 3. Navigation Liens Principaux (Multi-Pages) -->
+                <nav class="header-nav d-none d-xl-flex">
+                    <a href="index.html" class="nav-link-custom active">Accueil</a>
+                    <a href="boutique.html" class="nav-link-custom">Boutique</a>
+                    <a href="reparation.html" class="nav-link-custom">Réparation &amp; SAV</a>
+                    <a href="contact.html" class="nav-link-custom">Contact &amp; Accès</a>
+                </nav>
+
+                <!-- 4. Actions : Panier, WhatsApp Direct & Burger Mobile -->
+                <div class="header-actions">
+                    <!-- Bouton Panier Interactif -->
+                    <button class="cart-trigger-btn" id="openCartBtn" type="button" aria-label="Voir le panier">
+                        <i class="fas fa-bag-shopping"></i>
+                        <span class="cart-counter" id="cartCount">0</span>
+                    </button>
+
+                    <!-- Bouton WhatsApp Commande -->
+                    <a href="https://wa.me/221783333321?text=Bonjour%20House%20Tech,%20je%20souhaite%20commander%20un%20appareil"
+                        target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct d-none d-sm-inline-flex">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>COMMANDER</span>
+                    </a>
+
+                    <!-- Bouton Menu Burger Mobile -->
+                    <button class="burger-menu-btn d-xl-none" id="mobileMenuBtn" type="button" aria-label="Menu">
+                        <i class="fas fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Barre de Recherche sur Smartphone (Visible sous 992px) -->
+            <div class="mobile-search-row d-lg-none py-2">
+                <form class="search-form" onsubmit="event.preventDefault();">
+                    <input type="text" placeholder="Rechercher un iPhone, Samsung, accessoire..." autocomplete="off">
+                    <button type="submit" aria-label="Rechercher">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tiroir de Navigation Mobile (Fond Blanc Opaque 100% Étanche) -->
+        <div class="mobile-nav-drawer" id="mobileNavDrawer">
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="m-nav-link active">Accueil</a>
+                <a href="boutique.html" class="m-nav-link">Boutique (Tous les smartphones)</a>
+                <a href="reparation.html" class="m-nav-link">Atelier Réparation &amp; SAV (Keur Mbaye Fall)</a>
+                <a href="contact.html" class="m-nav-link">Accès Boutique &amp; Horaires</a>
+                <a href="https://wa.me/221783333321" target="_blank" class="m-nav-link text-whatsapp">
+                    <i class="fab fa-whatsapp me-2"></i>WhatsApp Direct : +221 78 333 33 21
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- ==========================================================================
+            SECTION 3 : HERO SECTION TECH (ACCROCHE PRESTIGE)
+         ========================================================================== -->
+    <section class="hero-tech-section">
+        <div class="container">
+            <div class="row align-items-center g-4 g-lg-5 py-4 py-lg-5">
+                <!-- Colonne Gauche : Titre, Slogan & Boutons -->
+                <div class="col-lg-7 text-center text-lg-start">
+                    <div class="hero-tech-badge">
+                        <i class="fas fa-shield-halved text-tech-blue me-2"></i>
+                        <span>Smartphones Neufs &amp; Reconditionnés avec Garantie</span>
+                    </div>
+
+                    <h1 class="hero-tech-title">
+                        L'UNIVERS DU SMARTPHONE <br class="d-none d-md-inline">
+                        <span class="text-tech-gradient">CERTIFIÉ &amp; GARANTI.</span>
+                    </h1>
+
+                    <p class="hero-tech-desc">
+                        Retrouvez les derniers <strong>iPhones scellés</strong>, la gamme <strong>Samsung Galaxy</strong> et tous les accessoires d'origine certifiés chez <strong>House Tech</strong>. Disponibles immédiatement en boutique à Keur Mbaye Fall ou en livraison express à Dakar.
+                    </p>
+
+                    <div class="hero-btn-group mb-0">
+                        <a href="boutique.html" class="btn-tech-primary">
+                            <i class="fas fa-mobile-screen-button me-2"></i>Explorer la Boutique
+                        </a>
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20je%20cherche%20un%20smartphone"
+                            target="_blank" rel="noopener noreferrer" class="btn-tech-whatsapp">
+                            <i class="fab fa-whatsapp me-2 fs-5"></i>Commander sur WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne Droite : Visuel Smartphone HD avec Badge Flottant -->
+                <div class="col-lg-5 text-center">
+                    <div class="hero-image-wrapper">
+                        <div class="floating-tech-badge">
+                            <i class="fas fa-award text-warning fs-4"></i>
+                            <div class="text-start">
+                                <span class="badge-title">Garantie Officielle</span>
+                                <small class="badge-sub">3 à 12 mois avec Facture</small>
+                            </div>
+                        </div>
+
+                        <img src="assets/img/products/iphones/iphone-18-pro.png"
+                            alt="Smartphones House Tech Dakar" class="hero-phone-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+            SECTION 4 : BANDEAU DE RÉASSURANCE & CONFIANCE (LES 4 PILIERS)
+         ========================================================================== -->
+    <section class="trust-tech-bar">
+        <div class="container">
+            <div class="row g-3 g-md-4">
+                <!-- 1. Authenticité -->
+                <div class="col-6 col-lg-3">
+                    <div class="trust-card">
+                        <div class="trust-icon-box">
+                            <i class="fas fa-certificate text-tech-blue"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4 class="trust-title">100% Authentique</h4>
+                            <p class="trust-desc">Appareils originaux scellés avec facture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Garantie -->
+                <div class="col-6 col-lg-3">
+                    <div class="trust-card">
+                        <div class="trust-icon-box">
+                            <i class="fas fa-shield-halved text-tech-blue"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4 class="trust-title">Garantie 3 à 12 Mois</h4>
+                            <p class="trust-desc">SAV &amp; assistance directe à l'atelier</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Livraison Express -->
+                <div class="col-6 col-lg-3">
+                    <div class="trust-card">
+                        <div class="trust-icon-box">
+                            <i class="fas fa-truck-fast text-tech-blue"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4 class="trust-title">Livraison en 2h</h4>
+                            <p class="trust-desc">Dakar &amp; Banlieue (Keur Mbaye Fall, etc.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Paiement Sécurisé -->
+                <div class="col-6 col-lg-3">
+                    <div class="trust-card">
+                        <div class="trust-icon-box">
+                            <i class="fas fa-hand-holding-dollar text-tech-blue"></i>
+                        </div>
+                        <div class="trust-text">
+                            <h4 class="trust-title">Paiement à la Réception</h4>
+                            <p class="trust-desc">Wave, Orange Money ou Espèces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================================================================
+            SECTION 5 : RAYONS & UNIVERS VISUELS (ALIGNE AU MILLIMÈTRE)
+         ========================================================================== -->
+    <section id="rayons" class="departments-section">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <span class="section-tag-blue">UNIVERS TECH</span>
+                <h2 class="section-heading-dark">EXPLOREZ NOS RAYONS</h2>
+                <p class="section-sub-text">Smartphones certifiés, accessoires d'origine et réparations à Keur Mbaye Fall.</p>
+            </div>
+
+            <!-- Grille compacte g-2 sur mobile (zéro espace vide disproportionné) -->
+            <div class="row g-2 g-md-3 g-lg-4">
+                <!-- Rayon 1 -->
+                <div class="col-6 col-lg-3">
+                    <a href="boutique.html?cat=iphones" class="tech-widget-card">
+                        <div class="widget-icon-box icon-apple"><i class="fab fa-apple"></i></div>
+                        <h3 class="widget-title">iPhones <span class="d-block">&amp; Apple</span></h3>
+                        <p class="widget-desc">iPhone 11 à 18 Pro Max • Scellés &amp; Garantis</p>
+                        <div class="widget-footer">
+                            <span class="widget-action-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Rayon 2 -->
+                <div class="col-6 col-lg-3">
+                    <a href="boutique.html?cat=android" class="tech-widget-card">
+                        <div class="widget-icon-box icon-samsung"><i class="fab fa-android"></i></div>
+                        <h3 class="widget-title">Samsung <span class="d-block">&amp; Android</span></h3>
+                        <p class="widget-desc">Galaxy S, Série A &amp; Redmi • Neufs &amp; Occasions</p>
+                        <div class="widget-footer">
+                            <span class="widget-action-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Rayon 3 : Zéro mot coupé -->
+                <div class="col-6 col-lg-3">
+                    <a href="boutique.html?cat=accessoires" class="tech-widget-card">
+                        <div class="widget-icon-box icon-audio"><i class="fas fa-headphones"></i></div>
+                        <h3 class="widget-title">Accessoires <span class="d-block">&amp; Audio</span></h3>
+                        <p class="widget-desc">AirPods, chargeurs 20W/25W, câbles &amp; coques</p>
+                        <div class="widget-footer">
+                            <span class="widget-action-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Rayon 4 : Zéro mot coupé -->
+                <div class="col-6 col-lg-3">
+                    <a href="boutique.html?cat=gadgets" class="tech-widget-card">
+                        <div class="widget-icon-box icon-watch"><i class="fas fa-stopwatch"></i></div>
+                        <h3 class="widget-title">Montres <span class="d-block">&amp; Gadgets</span></h3>
+                        <p class="widget-desc">Apple Watch, smartwatches &amp; accessoires tech</p>
+                        <div class="widget-footer">
+                            <span class="widget-action-circle"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- ==========================================================================
+            SECTION 6 : SHOWROOM SMARTPHONES & ACCESSOIRES (FICHES COMPLÈTES SANS COUPURE)
+         ========================================================================== -->
+    <section id="smartphones" class="tech-products-section">
+        <div class="container">
+            <!-- En-tête -->
+            <div class="section-title-wrap text-center">
+                <span class="section-tag-blue">SHOWROOM OFFICIEL</span>
+                <h2 class="section-heading-dark">SMARTPHONES &amp; ARRIVAGES</h2>
+                <p class="section-sub-text">Appareils certifiés scellés et reconditionnés avec garantie en boutique à Keur Mbaye Fall.</p>
+            </div>
+
+            <!-- Filtres par Marques (Balayage tactile fluide) -->
+            <div class="tech-filters-wrapper">
+                <div class="tech-filters-group">
+                    <button class="tech-filter-pill active" type="button" data-filter="all">TOUS</button>
+                    <button class="tech-filter-pill" type="button" data-filter="iphones">iPHONES</button>
+                    <button class="tech-filter-pill" type="button" data-filter="samsung">SAMSUNG</button>
+                    <button class="tech-filter-pill" type="button" data-filter="accessoires">ACCESSOIRES</button>
+                </div>
+            </div>
+
+            <!-- Grille des Produits -->
+            <div class="row g-3 g-md-4" id="techGrid">
+
+                <!-- 1. iPhone 18 Pro -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="iphones">
+                    <div class="device-card" data-title="iPhone 18 Pro">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-sealed">NOUVEAU 2026</span>
+                            <img src="assets/img/products/iphones/iphone-18-pro.png" alt="iPhone 18 Pro" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Apple</span>
+                            <h4 class="device-name">iPhone 18 Pro</h4>
+                            <p class="device-short-specs">Puce Bionic 2026 • OLED 120Hz • Deep Plum</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Stockage :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">256 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">512 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">1 To</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. iPhone 15 Pro Max -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="iphones">
+                    <div class="device-card" data-title="iPhone 15 Pro Max">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-sealed">SCELLÉ</span>
+                            <img src="assets/img/products/iphones/iphone-15-pro-max.png" alt="iPhone 15 Pro Max" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Apple</span>
+                            <h4 class="device-name">iPhone 15 Pro Max</h4>
+                            <p class="device-short-specs">Puce A17 Pro • Titane Naturel • Zoom 5x</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Stockage :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">256 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">512 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">1 To</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Samsung Galaxy S24 Ultra -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="samsung">
+                    <div class="device-card" data-title="Samsung Galaxy S24 Ultra">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-warranty">GARANTIE 12M</span>
+                            <img src="assets/img/products/android/Galaxy-S24-Ultra.png" alt="Samsung Galaxy S24 Ultra" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Samsung</span>
+                            <h4 class="device-name">Galaxy S24 Ultra</h4>
+                            <p class="device-short-specs">Galaxy AI • S-Pen intégré • Capteur 200 MP</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Stockage :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">256 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">512 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">1 To</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Samsung Galaxy A55 5G -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="samsung">
+                    <div class="device-card" data-title="Samsung Galaxy A55 5G">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-sealed">NEUF SCELLÉ</span>
+                            <img src="assets/img/products/android/Galaxy-A55-5G.png" alt="Samsung Galaxy A55 5G" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Samsung</span>
+                            <h4 class="device-name">Galaxy A55 5G</h4>
+                            <p class="device-short-specs">Écran Super AMOLED 120Hz • Étanche IP67</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Stockage :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">128 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">256 Go</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. iPhone 11 -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="iphones">
+                    <div class="device-card" data-title="iPhone 11">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-popular">BEST-SELLER</span>
+                            <img src="assets/img/products/iphones/Iphone-11.jpg" alt="iPhone 11" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Apple</span>
+                            <h4 class="device-name">iPhone 11</h4>
+                            <p class="device-short-specs">Puce A13 Bionic • Face ID • Double Caméra</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Stockage :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">64 Go</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">128 Go</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Apple Watch Series -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="accessoires">
+                    <div class="device-card" data-title="Apple Watch Series Connectée">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-warranty">CONNECTÉ</span>
+                            <img src="assets/img/products/accessoires/Apple-Watch-Series.png" alt="Apple Watch Series" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Montre Apple</span>
+                            <h4 class="device-name">Apple Watch Series</h4>
+                            <p class="device-short-specs">Capteurs Cardiaques • Étanche • Sport &amp; Santé</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Boîtier :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active" onclick="selectStorage(this)">41 mm</button>
+                                    <button type="button" class="storage-btn" onclick="selectStorage(this)">45 mm</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Adaptateur 20W Apple Original -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="accessoires">
+                    <div class="device-card" data-title="Chargeur 20W Apple USB-C Original">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-sealed">ORIGINE APPLE</span>
+                            <img src="assets/img/products/accessoires/Adaptateur-20W-Apple.png" alt="Chargeur Apple 20W" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Accessoires Charge</span>
+                            <h4 class="device-name">Chargeur Apple 20W</h4>
+                            <p class="device-short-specs">Port USB-C • Charge Rapide • Câble Inclus</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Norme :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active">USB-C 20W</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Enceinte Bluetooth JBL -->
+                <div class="col-6 col-md-4 col-lg-3 tech-product-col" data-category="accessoires">
+                    <div class="device-card" data-title="Enceinte Bluetooth JBL Portable">
+                        <div class="device-media-box">
+                            <span class="device-badge badge-popular">SON PUISSANT</span>
+                            <img src="assets/img/products/accessoires/Bluetooth-Speaker-JBL.png" alt="Enceinte Bluetooth JBL" class="device-img">
+                        </div>
+                        <div class="device-details">
+                            <span class="device-brand-label">Audio &amp; Son</span>
+                            <h4 class="device-name">Enceinte JBL Portable</h4>
+                            <p class="device-short-specs">Basses Puissantes • Autonomie 12h • Bluetooth 5.3</p>
+                            
+                            <div class="storage-selector">
+                                <span class="storage-label">Format :</span>
+                                <div class="storage-options">
+                                    <button type="button" class="storage-btn active">Boombox</button>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <span class="stock-status-pill"><i class="fas fa-circle-check text-success me-1"></i>En Stock</span>
+                                <button type="button" class="btn-add-device-cart" onclick="addToCart(this)">
+                                    <i class="fas fa-cart-plus me-1"></i> Panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bouton vers la boutique complète -->
+            <div class="text-center mt-4 mt-md-5">
+                <a href="boutique.html" class="btn-view-all-shop">
+                    <span>Explorer Tout le Stock dans la Boutique</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section> 
+    <!-- ==========================================================================
+            SECTION 7 : ATELIER RÉPARATION & SAV EXPRESS (30 MIN À KEUR MBAYE FALL)
+         ========================================================================== -->
+    <section id="reparation" class="repair-service-section">
+        <div class="container">
+            <!-- En-tête -->
+            <div class="section-title-wrap text-center">
+                <span class="section-tag-blue">ATELIER &amp; SAV EXPRESS</span>
+                <h2 class="section-heading-dark">RÉPARATION EN 30 MINUTES</h2>
+                <p class="section-sub-text">Diagnostic immédiat et réparation sur place dans notre atelier à Keur Mbaye Fall, Arrêt Dioumadji.</p>
+            </div>
+
+            <!-- Grille des 4 Services de Réparation -->
+            <div class="row g-3 g-md-4">
+                <!-- 1. Écran -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="repair-card">
+                        <div class="repair-icon-box">
+                            <i class="fas fa-mobile-screen text-tech-blue"></i>
+                        </div>
+                        <span class="repair-time-badge"><i class="fas fa-stopwatch me-1"></i>30 à 45 min</span>
+                        <h3 class="repair-title">Changement d'Écran</h3>
+                        <p class="repair-desc">Écran cassé, tactile figé ou traits de couleur. Pose d'afficheurs neufs certifiés pour iPhone et Samsung.</p>
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20je%20souhaite%20un%20devis%20pour%20changer%20mon%20écran"
+                            target="_blank" rel="noopener noreferrer" class="btn-repair-quote">
+                            <span>Devis Réparation</span>
+                            <i class="fab fa-whatsapp ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Batterie -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="repair-card">
+                        <div class="repair-icon-box">
+                            <i class="fas fa-battery-half text-tech-blue"></i>
+                        </div>
+                        <span class="repair-time-badge"><i class="fas fa-stopwatch me-1"></i>20 à 30 min</span>
+                        <h3 class="repair-title">Remplacement Batterie</h3>
+                        <p class="repair-desc">Batterie qui se décharge vite ou téléphone qui s'éteint tout seul. Batteries 100% santé avec garantie.</p>
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20je%20souhaite%20un%20devis%20pour%20remplacer%20ma%20batterie"
+                            target="_blank" rel="noopener noreferrer" class="btn-repair-quote">
+                            <span>Devis Réparation</span>
+                            <i class="fab fa-whatsapp ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Connecteur & Son -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="repair-card">
+                        <div class="repair-icon-box">
+                            <i class="fas fa-plug-circle-bolt text-tech-blue"></i>
+                        </div>
+                        <span class="repair-time-badge"><i class="fas fa-stopwatch me-1"></i>30 min</span>
+                        <h3 class="repair-title">Connecteur de Charge</h3>
+                        <p class="repair-desc">Faux contact lors de la charge, micro bouché ou haut-parleur qui grésille. Nettoyage et soudure propre.</p>
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20mon%20téléphone%20a%20un%20problème%20de%20charge/son"
+                            target="_blank" rel="noopener noreferrer" class="btn-repair-quote">
+                            <span>Devis Réparation</span>
+                            <i class="fab fa-whatsapp ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Déblocage & Système -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="repair-card">
+                        <div class="repair-icon-box">
+                            <i class="fas fa-unlock-keyhole text-tech-blue"></i>
+                        </div>
+                        <span class="repair-time-badge"><i class="fas fa-stopwatch me-1"></i>Express</span>
+                        <h3 class="repair-title">Déblocage &amp; Flash</h3>
+                        <p class="repair-desc">Désimlockage réseau international, récupération de compte, mise à jour système et réinitialisation sécurisée.</p>
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20j'ai%20besoin%20d'un%20déblocage/flash%20de%20téléphone"
+                            target="_blank" rel="noopener noreferrer" class="btn-repair-quote">
+                            <span>Devis Réparation</span>
+                            <i class="fab fa-whatsapp ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bandeau de Réassurance Atelier -->
+            <div class="repair-trust-banner mt-4 mt-md-5">
+                <div class="row align-items-center g-3 text-center text-md-start">
+                    <div class="col-12 col-md-8">
+                        <h4 class="trust-banner-title">Votre téléphone réparé directement sous vos yeux</h4>
+                        <p class="trust-banner-sub mb-0">Diagnostic gratuit sans engagement à l'atelier de Keur Mbaye Fall. Pièces testées avant montage.</p>
+                    </div>
+                    <div class="col-12 col-md-4 text-md-end">
+                        <a href="https://wa.me/221783333321?text=Salamalekoum%20House%20Tech,%20je%20veux%20passer%20à%20l'atelier%20pour%20une%20réparation"
+                            target="_blank" rel="noopener noreferrer" class="btn-visit-workshop">
+                            <i class="fas fa-location-dot me-1.5"></i>Prendre RDV à l'Atelier
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================================================================
+            SECTION 8 : AVIS CLIENTS VÉRIFIÉS (5,0 ÉTOILES GOOGLE MAPS)
+         ========================================================================== -->
+    <section class="reviews-tech-section">
+        <div class="container">
+            <!-- En-tête -->
+            <div class="section-title-wrap text-center">
+                <div class="google-rating-score-pill">
+                    <i class="fab fa-google text-primary me-2 fs-5"></i>
+                    <div class="stars-gold me-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <strong>5,0 / 5</strong>
+                </div>
+                <h2 class="section-heading-dark mt-3">L'EXPÉRIENCE HOUSE TECH</h2>
+                <p class="section-sub-text">La satisfaction de nos clients à Keur Mbaye Fall et partout à Dakar est notre priorité absolue.</p>
+            </div>
+
+            <!-- Grille des 3 Avis Clients -->
+            <div class="row g-3 g-md-4">
+                <!-- Avis 1 : Achat iPhone -->
+                <div class="col-12 col-md-4">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar">M</div>
+                            <div>
+                                <h5 class="reviewer-name">Mamadou D.</h5>
+                                <small class="review-date">Client vérifié • Keur Mbaye Fall</small>
+                            </div>
+                            <i class="fab fa-google text-muted ms-auto fs-6"></i>
+                        </div>
+                        <div class="stars-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            « J'ai acheté mon iPhone 13 scellé chez House Tech. Téléphone 100% authentique avec facture et garantie. Livraison rapide et service très sérieux. Je recommande les yeux fermés ! »
+                        </p>
+                        <span class="review-tag">Achat iPhone Scellé</span>
+                    </div>
+                </div>
+
+                <!-- Avis 2 : Réparation Écran SAV -->
+                <div class="col-12 col-md-4">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar avatar-blue">A</div>
+                            <div>
+                                <h5 class="reviewer-name">Awa S.</h5>
+                                <small class="review-date">Cliente vérifiée • Rufisque</small>
+                            </div>
+                            <i class="fab fa-google text-muted ms-auto fs-6"></i>
+                        </div>
+                        <div class="stars-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            « Réparation d'écran iPhone effectuée en moins de 35 minutes directement à l'atelier de l'arrêt Dioumadji. Travail propre, écran de qualité et équipe très accueillante. Merci ! »
+                        </p>
+                        <span class="review-tag">Réparation Écran 30 min</span>
+                    </div>
+                </div>
+
+                <!-- Avis 3 : Accessoire Chargeur -->
+                <div class="col-12 col-md-4">
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar avatar-dark">I</div>
+                            <div>
+                                <h5 class="reviewer-name">Ibrahima N.</h5>
+                                <small class="review-date">Client vérifié • Dakar</small>
+                            </div>
+                            <i class="fab fa-google text-muted ms-auto fs-6"></i>
+                        </div>
+                        <div class="stars-gold mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            « Enfin une boutique qui vend de vrais accessoires d'origine à Keur Mbaye Fall. Chargeur original et ultra rapide. Prix très corrects. »
+                        </p>
+                        <span class="review-tag">Accessoire Apple d'Origine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================================================================
+            SECTION 9 : RETRAIT EN BOUTIQUE & ACCÈS EXPRESS (LIGHT & RAPIDE)
+         ========================================================================== -->
+    <section class="store-teaser-section">
+        <div class="container">
+            <div class="store-teaser-card">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <span class="section-tag-blue mb-2">BOUTIQUE PHYSIQUE • DAKAR</span>
+                        <h2 class="store-teaser-title">Venez tester vos appareils directement en boutique</h2>
+                        <p class="store-teaser-desc">
+                            Notre équipe vous accueille à <strong>Keur Mbaye Fall (Arrêt Dioumadji)</strong> pour découvrir les smartphones, tester les accessoires et réaliser vos réparations express en 30 minutes chrono.
+                        </p>
+                        
+                        <div class="store-info-pills">
+                            <span class="store-pill">
+                                <i class="fas fa-location-dot text-tech-blue me-1.5"></i>Keur Mbaye Fall, Arrêt Dioumadji
+                            </span>
+                            <span class="store-pill">
+                                <i class="fas fa-clock text-tech-blue me-1.5"></i>Lun - Sam : 09h00 - 22h00
+                            </span>
+                            <span class="store-pill">
+                                <i class="fas fa-phone-volume text-tech-blue me-1.5"></i>+221 78 333 33 21
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 text-center text-lg-end">
+                        <div class="d-flex flex-column flex-sm-row flex-lg-column gap-2.5 justify-content-center">
+                            <a href="contact.html" class="btn-store-primary">
+                                <i class="fas fa-map-location-dot me-2"></i>Plan d'Accès &amp; Contact Complet
+                            </a>
+                            <a href="https://maps.google.com/?q=House+Tech+Dakar+Keur+Mbaye+Fall" target="_blank" rel="noopener noreferrer" class="btn-store-outline">
+                                <i class="fas fa-diamond-turn-right me-2"></i>Ouvrir l'Itinéraire GPS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ==========================================================================
+            SECTION 10 : FOOTER DE MARQUE & CRÉDITS
+         ========================================================================== -->
+    <footer class="tech-footer">
+        <div class="container text-center">
+            <div class="footer-brand-title">HOUSE TECH DAKAR</div>
+            <p class="footer-tagline">Smartphones garantis, accessoires certifiés et réparation express à Keur Mbaye Fall.</p>
+            
+            <div class="footer-links-row">
+                <a href="index.html">Accueil</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="reparation.html">Réparation</a>
+                <a href="contact.html">Contact &amp; Accès</a>
+                <a href="https://wa.me/221783333321" target="_blank" rel="noopener noreferrer" class="text-whatsapp">WhatsApp Direct</a>
+            </div>
+
+            <div class="footer-credits-line">
+                <p class="mb-0 fs-8 text-muted">&copy; 2026 <strong>House Tech</strong>. Keur Mbaye Fall, Arrêt Dioumadji, Dakar, Sénégal.</p>
+                <small class="fs-8 text-muted">Conception &amp; Réalisation : <strong>Bamba Web Studio</strong></small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Flottant WhatsApp (Fixé en bas à droite) -->
+    <a href="https://wa.me/221783333321?text=Bonjour%20House%20Tech,%20je%20vous%20contacte%20depuis%20votre%20site%20web" 
+       target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Discuter sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- ==========================================================================
+            TIROIR DU PANIER TECH (OFFCANVAS BLANC ÉPURÉ)
+         ========================================================================== -->
+    <div class="cart-backdrop-light" id="cartBackdrop"></div>
+    <aside class="cart-side-drawer-light" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h5 class="cart-drawer-title">
+                <i class="fas fa-bag-shopping text-tech-blue me-2"></i>VOTRE PANIER HOUSE TECH
+            </h5>
+            <button type="button" class="btn-close-drawer" id="closeCartBtn" aria-label="Fermer">&times;</button>
+        </div>
+        <div class="cart-drawer-body">
+            <div id="cartItemsList" class="cart-items-flow">
+                <!-- Rempli par JavaScript -->
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line">
+                <span>Appareils sélectionnés :</span>
+                <strong id="cartItemCountDisplay">0 article</strong>
+            </div>
+            <button type="button" id="btnSendWhatsAppOrder" class="btn-whatsapp-checkout-tech" onclick="sendOrderToWhatsApp()">
+                <i class="fab fa-whatsapp me-2 fs-5"></i>COMMANDER SUR WHATSAPP
+            </button>
+            <button type="button" class="btn-clear-cart-tech" onclick="clearCart()">Vider le panier</button>
+        </div>
+    </aside>
+
+    <!-- Script JavaScript Dédié -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
